@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Container from "@/components/Container";
 import { BreadcrumbDemo } from "@/components/Breadcrumb";
+import ReportView from "@/components/home/reportView";
 export async function generateStaticParams() {
   let posts = getBlogPosts();
   return posts.map((post) => ({
@@ -19,6 +20,11 @@ const page = ({ params }: { params: { category: string; slug: string } }) => {
 
   return (
     <>
+      <ReportView
+        slug={post.slug}
+        title={post.metadata.title}
+        category={post.metadata.category}
+      />
       <Header>
         <Container>
           <BreadcrumbDemo category={post.metadata.category} slug={post.slug} />

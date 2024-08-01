@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/ui/footer";
 
@@ -25,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
