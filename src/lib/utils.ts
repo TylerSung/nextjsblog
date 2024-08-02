@@ -17,4 +17,5 @@ type ResponseData = {
 
 export const fetcher = (
   ...args: Parameters<typeof fetch>
+  
 ): Promise<ResponseData> => fetch(...args).then((res) => res.json());
