@@ -27,7 +27,7 @@ export function MainNav({ className }: { className?: string }) {
     >
       <Link href="/" className="flex items-center justify-center gap-2  ">
         <Icons.Logo size={24} />
-        <span className="font-bold">Tyler song</span>
+        <span className="font-bold">Tyler Sung</span>
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
